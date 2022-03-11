@@ -1,37 +1,34 @@
 #include <stdio.h>
 
 /**
-  * main - Prints 3 combination of numbers
-  *
-  * Return: Always (Success)
-  */
+ * main - entry
+ * Return: 0
+ **/
+
 int main(void)
 {
-	int c, i, k;
+	int a, b, c;
 
-	for (c = '0'; c <= '9'; c++)
+	for (a = '0'; a <= '9' ; a++)
 	{
-		for (i = '0'; i <= '9'; i++)
+	for (b = a ; b <= '9' ; b++)
+	{
+	for (c = b ; c <= '9' ; c++)
+	{
+		if (a != b && b != c)
 		{
-			for (k = '0'; k <= '9'; k++)
-			{
-				if (c < i && i < k)
-				{
-					putchar(c);
-					putchar(i);
-					putchar(k);
-
-					if (c != '7')
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-			}
+		putchar(a);
+		putchar(b);
+		putchar(c);
+		if (a < '7')
+		{
+		putchar(',');
+		putchar(' ');
+		}
 		}
 	}
-
+	}
+	}
 	putchar('\n');
-
 	return (0);
 } 

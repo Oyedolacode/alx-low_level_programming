@@ -1,25 +1,30 @@
 #include <stdio.h>
+
 /**
- *main - function
- *Return: valve 0
- */
+ * main - entry
+ * Return: 0
+ **/
+
 int main(void)
 {
-int a;
-int b;
-int c;
-for (a = 0; a < 100; a++)
-{
-b = a / 10;
-c = a % 10;
-putchar(b + '0');
-putchar(c + '0');
-if (a < 99)
-{
-putchar(',');
-putchar(' ');
-}
-}
-putchar('\n');
-return (0);
+	int a, b;
+
+	for (a = '0'; a <= '9' ; a++)
+	{
+	for (b = a ; b <= '9' ; b++)
+	{
+		if (a != b)
+		{
+		putchar(a);
+		putchar(b);
+		if (a < '8')
+		{
+		putchar(',');
+		putchar(' ');
+		}
+		}
+	}
+	}
+	putchar('\n');
+	return (0);
 }
